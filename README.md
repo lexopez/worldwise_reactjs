@@ -1,18 +1,64 @@
-# React + Vite
+# 🌍 WorldWise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WorldWise is a travel tracking application that allows users to bookmark cities they have visited across the globe. The app features an interactive map, city/country listings, and a personal diary of travel experiences.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Map**: Click anywhere on the map to add a new city to your list.
+- **Location Tracking**: Automatically fetch your current location via geolocation.
+- **City & Country Management**: View your travels organized by specific cities or grouped by countries.
+- **Dynamic Routing**: Uses nested routes to manage different views within the app dashboard.
+- **Global State**: Managed entirely through the Context API for a seamless user experience.
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠️ Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- **Framework**: [React](https://reactjs.org/)
+- **Routing**: [React Router](https://reactrouter.com/) (Nested routes, Protected routes, URL Search Params)
+- **State Management**: **Context API** (Used for global city data and authentication state)
+- **Data Fetching**: **useEffect** (Standard side-effect management for API calls)
+- **Styling**: CSS Modules
+- **Map Integration**: [React Leaflet](https://react-leaflet.js.org/)
+- **Backend**: JSON Server (Mock API)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+```text
+src/
+├── components/     # Reusable UI components (Sidebar, Map, CityItem, etc.)
+├── contexts/       # Context providers (CitiesContext, AuthContext)
+├── hooks/          # Custom hooks (useGeolocation, useUrlPosition)
+├── pages/          # Main route components (Homepage, AppLayout, Login)
+└── App.jsx         # Main application component with Route definitions
+```
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/lexopez/worldwise_reactjs.git
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
+
+```bash
+npm run dev
+```
+
+### 3️⃣ Run the json server
+
+```bash
+npm run server
+```
+
+---
