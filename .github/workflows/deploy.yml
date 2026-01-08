@@ -28,7 +28,6 @@ jobs:
   deploy:
     name: Deploy to Vercel
     runs-on: ubuntu-latest
-    if: success()
 
     steps:
       - name: Checkout Repository
