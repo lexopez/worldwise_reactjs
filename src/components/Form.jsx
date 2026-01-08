@@ -14,8 +14,7 @@ import Spinner from "./Spinner";
 import { useCities } from "../contexts/CitiesContext";
 import { useNavigate } from "react-router-dom";
 import { convertToEmoji } from "../utils/convertCodeToEmoji";
-
-const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
+import { BASE_URL } from "../utils/constants";
 
 function Form() {
   const [lat, lng] = useUrlPosition();
